@@ -31,9 +31,9 @@ def Birthday(Birthdate):
         till_your_next_birthday = till_your_next_birthday.days + 1
         return (f'it\'s {days_till_now} days since you were born,\n'
                 f'almost {seconds_till_now} seconds,\n'
-                f'your birthday in our calender {birtdate_in_our_calender.jyear}/{birtdate_in_our_calender.jmonth}/'
+                f'your birthday in jalali calender {birtdate_in_our_calender.jyear}/{birtdate_in_our_calender.jmonth}/'
                 f'{birtdate_in_our_calender.jday},\n'
-                f'{till_your_next_birthday} days till your next birthday, so Happy Birthday to you from now.')
+                f'{till_your_next_birthday} days till your next birthday')
     elif is_birthday_today:
         return (f'it\'s {days_till_now} days since you were born,\n'
                 f'almost {seconds_till_now} seconds,\n'
