@@ -4,7 +4,7 @@ import jdatetime
 
 def birthday_in_gregorian(Birthdate):
     """
-    enter your birthdate as input, and ti returns a little bit of your birthdate information,
+    enter your birthdate as input, and it returns a little bit of your birthdate information,
     like number of days you lived,
     number of seconds since you were born,
     and days until your next birthday and also converts birthdate to Jalali cal
@@ -13,7 +13,7 @@ def birthday_in_gregorian(Birthdate):
     days_till_now = now - Birthdate
     days_till_now = days_till_now.days
     seconds_till_now = days_till_now * 86400
-    birtdate_in_our_calender = jdatetime.GregorianToJalali(Birthdate.year, Birthdate.month, Birthdate.day)
+    birthdate_in_jalali_calender = jdatetime.GregorianToJalali(Birthdate.year, Birthdate.month, Birthdate.day)
     till_your_next_birthday = None
     is_birthday_today = False
     if now.month == Birthdate.month and now.day == Birthdate.day:
@@ -31,8 +31,8 @@ def birthday_in_gregorian(Birthdate):
         till_your_next_birthday = till_your_next_birthday.days + 1
         return (f'it\'s {days_till_now} days since you were born,\n'
                 f'almost {seconds_till_now} seconds,\n'
-                f'your birthday in jalali calender {birtdate_in_our_calender.jyear}/{birtdate_in_our_calender.jmonth}/'
-                f'{birtdate_in_our_calender.jday},\n'
+                f'your birthday in jalali calender {birthdate_in_jalali_calender.jyear}/{birthdate_in_jalali_calender.jmonth}/'
+                f'{birthdate_in_jalali_calender.jday},\n'
                 f'{till_your_next_birthday} days till your next birthday')
     elif is_birthday_today:
         return (f'it\'s {days_till_now} days since you were born,\n'
@@ -42,7 +42,8 @@ def birthday_in_gregorian(Birthdate):
     return till_your_next_birthday
 
 
-birthday, birthmonth, birthyear = input('enter your birthdate(Milady), d m yyyy: \n').split()
-
-
-print(birthday_in_gregorian(datetime(int(birthyear), int(birthmonth), int(birthday))))
+try:
+    birthday, birthmonth, birthyear = input('enter your birthdate in gregorian, d m yyyy: \n').split()
+    print(birthday_in_gregorian(datetime(int(birthyear), int(birthmonth), int(birthday))))
+except ValueError:
+    print('enter birthdate correctly(d m yyyy)')
