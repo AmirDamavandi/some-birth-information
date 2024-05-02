@@ -45,4 +45,4 @@ def birthday_in_gregorian(Birthdate):
 birthday, birthmonth, birthyear = input('enter your birthdate(Milady), d m yyyy: \n').split()
 
 
-print(Birthday(datetime(int(birthyear), int(birthmonth), int(birthday))))
+print(birthday_in_gregorian(datetime(int(birthyear), int(birthmonth), int(birthday))))
