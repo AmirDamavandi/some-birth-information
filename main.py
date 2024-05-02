@@ -2,7 +2,7 @@ from datetime import datetime
 import jdatetime
 
 
-def Birthday(Birthdate):
+def birthday_in_gregorian(Birthdate):
     """
     enter your birthdate as input, and ti returns a little bit of your birthdate information,
     like number of days you lived,
