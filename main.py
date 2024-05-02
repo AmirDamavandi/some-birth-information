@@ -4,7 +4,7 @@ import jdatetime
 
 def Birthday(Birthdate):
     """
-    get your birthdate as input and returns a little bit of your birthdate information,
+    enter your birthdate as input, and ti returns a little bit of your birthdate information,
     like number of days you lived,
     number of seconds since you were born,
     and days until your next birthday and also converts birthdate to Jalali cal
